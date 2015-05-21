@@ -8,7 +8,7 @@ Book search app:
 - Stores search history in mysql database.
 - Rails 4.1.0
 - Relies on google books api to perform search.
-- Search uses Rest ORM (HER) for rails to perform rest request to google's api.
+- Search uses Rest ORM (HER) for rails to perform rest requests to google's api.
 
 == Gotchas
 I just created this basic web app on Ruby on rails to show RoR in action.
