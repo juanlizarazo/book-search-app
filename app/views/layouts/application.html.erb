@@ -5,30 +5,42 @@
 </head>
 <body>
   <div class="container">
-    <h3 class="text-info">Book search app</h3>
+    <h3 class="text-info">Book search by Juan Lizarazo</h3>
     <hr>
     <div class="row">
-      <div class="col-lg-12">
-        <h4 class="text-muted">Search ISBN</h4>
-      </div>
-      <div class="col-lg-11">
-        <input class="form-control" placeholder="Search book by isbn. Type ISBN number here" autofocus="true">
-      </div>
-      <div class="col-lg-1">
-        <a class="btn btn-default">
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
-        </a>
-      </div>
+      <%= form_tag("/search", method: 'post') do %>
+        <div class="col-lg-12">
+          <h4 class="text-muted">Search ISBN</h4>
+        </div>
+        <div class="col-lg-11">
+          <%= text_field_tag(:isbn, nil, { class: 'form-control', placeholder: 'Search book by isbn. Type ISBN number here' }) %>
+        </div>
+        <div class="col-lg-1">
+          <button type="submit" class="btn btn-default" id="search-btn">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+          </button>
+        </div>
+      <% end %>
+
+      <!-- error message box -->
+      <% flash.each do |type, message| %>
+        <div class="alert alert-danger"><%= message %></div>
+      <% end %>
+      <!--/ error message box -->
     </div>
     <hr>
     <div class="row">
+      <h4 class="text-muted">
+        Most Recent search results:
+      </h4>
       <div class="well bg-info">
         <% @recent_searches.each do |recent_search| %>
           <img src="<%= recent_search.thumbnail_url %>">
           <p class="text-muted">isbn: <%= recent_search.isbn %></p>
           <p class="text-info">
-            <%= recent_search.book_name %> by: <%= recent_search.author %>
+            <b><%= recent_search.book_name %></b> by <%= recent_search.author %>
           </p>
+          <hr>
         <% end %>
       </div>
     </div>
