@@ -38,6 +38,13 @@ GEM
     coffee-script-source (1.9.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    her (0.7.4)
+      activemodel (>= 3.0.0, <= 4.2.1)
+      activesupport (>= 3.0.0, <= 4.2.1)
+      faraday (>= 0.8, < 1.0)
+      multi_json (~> 1.7)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.16)
@@ -53,6 +60,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.6.1)
     multi_json (1.11.0)
+    multipart-post (2.0.0)
     mysql2 (0.3.18)
     polyglot (0.3.5)
     rack (1.5.3)
@@ -114,6 +122,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  her
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
