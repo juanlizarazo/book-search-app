@@ -5,7 +5,7 @@ class AddRecentSearches < ActiveRecord::Migration
       t.string :book_name
       t.string :thumbnail_url
       t.string :author
-      
+
       t.timestamps null: false
     end
   end
