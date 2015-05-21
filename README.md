@@ -16,6 +16,7 @@ Preview
 ![alt tag](https://raw.github.com/juanlizarazo/book-search-app/develop/master/app/assets/images/demo.png)
 
 Gotchas
+
 I just created this basic web app on Ruby on rails to show RoR in action.
 It took me a couple of hours, it's basic but it does the job.
 
