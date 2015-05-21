@@ -4,8 +4,7 @@ The result displays: Isbn, title, thumbnail image and author. As well as the las
 
 Book search app:
 
-- It uses migrations, models, controllers, views, form helpers, partials, flash errors, active record usage, 
-boostrap, seeds, routes, db config.
+- It uses migrations, models, controllers, views, form helpers, partials, flash errors, active record usage, boostrap, seeds, routes, db config.
 - Stores search history in mysql.
 - Rails 4.1.0
 - Relies on goolgle books api to perform search.
